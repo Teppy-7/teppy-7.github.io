@@ -1,0 +1,278 @@
+/* 全部の要素統一 */
+body {
+  font-family: Arial, sans-serif; /* フォールバックフォント */
+  color: #000000;
+  text-align: center;
+  font-style: normal;
+  background-image: url(img/background.png);
+  background-size: auto; /* 背景画像をウィンドウにフィット */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: PixelMplus12, Arial, sans-serif; /* 見出しのフォント */
+}
+
+p, ul, ol, li, a {
+  font-family: PixelMplus12, Arial, sans-serif; /* 本文、リスト、リンクのフォント */
+  font-size: 20px;
+}
+
+/* 改行部分 */
+.sp_br {
+  display: none;
+}
+
+/* それぞれ */
+header, footer {
+  background: #ED7F5D;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  height: 100px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 5em;
+}
+
+h2 {
+  color: #000000;
+  padding-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p {
+  color: rgb(1, 1, 1);
+}
+
+section {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 90px;
+  background: rgba(193, 193, 193, 0.85);
+  width: 100%;
+}
+section > div:last-child {/*セクションの最後のdiv*/
+  margin-bottom: 2em;
+}
+
+/* ゲーム情報//////////////////////////////////////////// */
+#gameInfoDiv {
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+}
+#gameInfoDiv > div {
+  padding: 2em;
+}
+#gameInfoDiv > div > p {
+  text-align: left;
+}
+#defIcon {
+  max-width: 200px;
+  max-height: 200px;
+}
+#storeLogoDiv {
+  padding-bottom: 2em;
+}
+.storeLogo {
+  max-height: 100px;
+}
+
+/* アップデート情報////////////////////////////////////////// */
+#updates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.update-container {
+  width: 80%; /* 枠の幅を設定 */
+  height: 100px; /* 枠の高さを設定 */
+  overflow: hidden; /* 超過したコンテンツを隠す */
+  background-color: #00000038;
+}
+.update-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  overflow-y: auto;
+}
+.update-content > p {
+  margin: 0;
+}
+
+/* スクリーンショット/////////////////////////////////////// */
+.screenshot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+}
+.screenshot > img {
+  max-width: 20%;
+}
+#image-carousel {
+  display: none;
+}
+
+
+/* お問い合わせ/////////////////////////////////////////// */
+#x_account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#x_account > img {
+  margin-right: 2em;
+}
+#privacyPolicy {
+  padding-bottom: 1em;
+}
+
+
+/* ナビゲーション///////////////////////////////////////// */
+#hamImg {
+  display: none;
+}
+#navigation {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex; /* 横方向に配置 */
+  flex-direction: row; /* 横方向に並べる */
+  gap: 10px; /* 項目間の間隔 */
+  border-radius: 0px 0px 20px 20px;
+  background: #E9EC75;
+}
+#navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#navigation li {
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+#navigation li:hover {
+  background-color: #cbbc33; /* ホバー時の背景色 */
+}
+
+#navigation a {
+  color: #000;
+  text-align: center;
+  font-family: PixelMplus12;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* スマホ適用 */
+@media screen and ( max-width:800px ) 
+{
+  /* 共通/////////////////////////////////////////////// */
+  p, ul, ol, li, a {
+    font-size: 15px;
+  }
+  .sp_br {
+    display: block;
+  }
+
+  /* ヘッダー //////////////////////////////////////////////*/
+  header {
+    font-size: 10px;
+  }
+  #navigation {
+    background: rgba(0, 0, 0, 0.762);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    top: 0;
+    right: 0;
+    display: none;
+    z-index: 2;
+  }
+  #navigation > ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #navigation > ul > li > a{
+    color: white;
+  }
+  #navigation li:hover {
+    background-color: #37373792; /* ホバー時の背景色 */
+  }
+  #hamImg {
+    display: block;
+    text-align: right;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    max-width: 70px;
+    z-index: 3;
+  }
+  #hamImg > img {
+    opacity: 0.5;
+  }
+  
+
+  /* ゲーム情報/////////////////////////////////////////////// */
+  #gameInfoDiv {
+    flex-direction: column;
+  }
+  
+  /* スクリーンショット/////////////////////////////////////////////// */
+  #screenshot {
+    display: none;
+  }
+  #image-carousel {
+    display: block;
+  }
+  #screenshots {
+    padding-bottom: 2em;
+  }
+  .screenshot {
+    display: none;
+  }
+  .splide__slide img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+
+
+
+
