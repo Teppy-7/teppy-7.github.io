@@ -3,78 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teppygamecreator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #333; /* ダーク系の背景色 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        #message-container {
-            background-color: #444; /* メッセージコンテナの背景色 */
-            color: #fff; /* テキストの色 */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            text-align: center;
-        }
-
-        #message {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        #go-link {
-            display: block;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        #image-container {
-            margin-bottom: 2em;
-            text-align: center;
-            transform: translateX(-50%); /* 水平方向中央揃え */
-            opacity: 0;
-            transform: scale(0.9);
-            animation: fadeInAndScale 1s 1s both;
-        }
-
-        @keyframes fadeInAndScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
+    <title>Teppy Games</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSSファイルのリンク -->
 </head>
 <body>
-<div>
-  
-  <div id="image-container">
-    <img src="img/teppyGameCreator_logo.jpg" alt="webサイトロゴ">
-  </div>
-  <div id="message-container">
-    <p id="message">サイトは以下のURLに移転しました。</p>
-    <a id="go-link" href="https://teppygamecreator.wixsite.com/teppygamecreator">WiXサイトへ移動</a>
-  </div>
-  
-</div>
+    <header>
+        <h1>Teppy Games</h1>
+        <div class="language-toggle">
+            <label for="language-select">Language:</label>
+            <select id="language-select">
+              <option value="ja">日本語</option>
+              <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <!-- <li class="current"><a href="#overview">Overview</a></li> -->
+            <!-- <li><a href="#news">News</a></li> -->
+            <li class="langCng" lang="en"><a href="#games">Games</a></li>
+            <li class="langCng" lang="ja"><a href="#games">ゲーム</a></li>
+            <li class="langCng" lang="en"><a href="#contact">Contact</a></li>
+            <li class="langCng" lang="ja"><a href="#contact">お問い合わせ</a></li>
+            <li class="langCng" lang="en"><a href="#privacyPolicy">PrivacyPolicy</a></li>
+            <li class="langCng" lang="ja"><a href="#privacyPolicy">プライバシーポリシー</a></li>
+        </ul>
+    </nav>
+
+    
+    <section id="overview">
+        <img src="img/teppyGameCreator_logo.jpg" alt="" id="title_logo">
+        <!-- <h2>Overview</h2>
+        <p>作成したゲームアプリやウェブアプリ、さらにそれに関連したブログなどを掲載するサイトです。</p> -->
+    </section>
+
+    <!-- <section id="news">
+        <h2>News</h2>
+            <div class="update-container">
+                <div class="update-content">
+                    <p class="langCng" lang="ja">version 1.0.0 リリース (2023/08/16)</p>
+                    <p class="langCng" lang="en">version 1.0.0 Release (2023/08/16)</p>
+                    <p class="langCng" lang="ja">version 1.0.0 リリース (2023/08/16)</p>
+                    <p class="langCng" lang="en">version 1.0.0 Release (2023/08/16)</p>
+                    <p class="langCng" lang="ja">version 1.0.0 リリース (2023/08/16)</p>
+                    <p class="langCng" lang="en">version 1.0.0 Release (2023/08/16)</p>
+                    <p class="langCng" lang="ja">version 1.0.0 リリース (2023/08/16)</p>
+                    <p class="langCng" lang="en">version 1.0.0 Release (2023/08/16)</p>
+                </div>
+            </div>
+    </section> -->
+
+    <section id="games">
+        <h2 class="langCng" lang="en">Games</h2>
+        <h2 class="langCng" lang="ja">ゲーム</h2>
+        <!-- Apps -->
+        <h3>=Apps=</h3>
+        <div id="Apps" class="gameDiscriptions">
+            <div>
+                <h3 class="langCng" lang="ja">Muse - スライドパズル</h3>
+                <h3 class="langCng" lang="en">Muse - SlidePuzzle</h3>
+                <img src="img/Muse_icon.png" alt="" class="appIcon">
+                <p class="langCng" lang="ja">
+                    「Muse-スライドパズル」は、簡単な操作で楽しめる中毒性のあるパズルゲームです。四角いオブジェクトをスライドさせてゴールを目指し、様々なギミックを駆使して最短ルートを見つけましょう。
+                </p>
+                <p class="langCng" lang="en">
+                    "Muse - Slide Puzzle" is an addictive puzzle game that can be enjoyed with simple controls. Slide square objects to aim for the goal and utilize various gimmicks to find the shortest route.
+                </p>
+                <p>↓Free Play↓</p>
+                <a href="https://apps.apple.com/app/muse-slidepuzzle/id6480391214"><img src="img/iosLogo.png" alt="" class="iosLogo"></a>
+            </div>
+            <div>
+                <h3 class="langCng" lang="ja">CrashBlock - 落ちてくるブロックを壊せ！</h3>
+                <h3 class="langCng" lang="en">CrashBlock - 落ちてくるブロックを壊せ！</h3>
+                <img src="img/CrashBlock_icon.png" alt="" class="appIcon">
+                <p class="langCng" lang="ja">
+                    「CrashBlock-落ちてくるブロックを壊せ!」はボールを使って徐々に落ちてくるブロックを壊すゲームです。パワーアップや特別な効果を持つ強力なアイテムを駆使して全50Waveのブロックを全て破壊しましょう！！
+                </p>
+                <p class="langCng" lang="en">
+                    「CrashBlock-落ちてくるブロックを壊せ!」 is a game where you use a ball to gradually destroy descending blocks. Utilize powerful items with power-ups and special effects to destroy all 50 waves of blocks! (Japanese Only)
+                </p>
+                <p>↓Free Play↓</p>
+                <a href="https://apps.apple.com/app/id6459053223"><img src="img/iosLogo.png" alt="" class="iosLogo"></a>
+            </div>
+        </div>
+        
+        <!-- WebGL -->
+        <h3>=Web=</h3>
+        <div id="WebGL" class="gameDiscriptions">
+            <div>
+                <h3 class="langCng" lang="ja">あなたのハートにズッキュン！＿リズムゲーム</h3>
+                <h3 class="langCng" lang="en">"Your Heart Goes ZUKYUN!_Rhythm Game"</h3>
+                <img src="img/あなたのハートに_icon.png" alt="" class="appIcon">
+                <p class="langCng" lang="ja">
+                    リズムゲーム♪通りががった女の人達にリズムよく恋のキューピッドの矢を打ってメロメロにさせよう！
+                </p>
+                <p class="langCng" lang="en">
+                    Rhythm game♪ Shoot Cupid's arrows rhythmically at passing women to make them fall head over heels in love!
+                </p>
+                <p>↓Free Play↓</p>
+                <a href="https://unityroom.com/games/zukkyun_rhythmgame" target="_blank"><img src="img/unityroom_logo.png" alt="" class="unityroomLogo"></a>
+            </div>
+            <div>
+                <h3 class="langCng" lang="ja">キンコンカン♫ねこ＿リズムゲーム</h3>
+                <h3 class="langCng" lang="en">"KinKonKan♫ Neko_Rhythm Game"</h3>
+                <img src="img/キンコンカン_icon.png" alt="" class="appIcon">
+                <p class="langCng" lang="ja">
+                    リズムゲーム♪リズムよく師匠ネコの指示通りに金槌を奮って立派な道具を作ろう！君も一緒に、トン♪チン♪カン♪
+                </p>
+                <p class="langCng" lang="en">
+                    "Rhythm Game♪ Follow Master Cat's instructions and swing the hammer to create splendid tools! Join in, Ton♪Chin♪Kan♪"
+                </p>
+                <p>↓Free Play↓</p>
+                <a href="https://unityroom.com/games/kinkonneko_rhythmgame" target="_blank"><img src="img/unityroom_logo.png" alt="" class="unityroomLogo"></a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="contact">
+        <h2 class="langCng" lang="en">Contact</h2>
+        <h2 class="langCng" lang="ja">お問い合わせ</h2>
+        <div id="mail" class="contactDiv">
+            <h3>Mail: </h3>
+            <a href="mailto:Teppy.gamecreator@gmail.com" target="_blank"><p>mail: Teppy.gamecreator@gmail.com</p></a>
+        </div>
+        <div id="x_account" class="contactDiv">
+            <h3>X(Twitter): </h3>
+            <!-- <a href="https://twitter.com/teppy_game" target="_blank"><p>@teppy_game</p></a> -->
+            <a class="twitter-timeline" data-width="500" data-height="1000" data-theme="dark" href="https://twitter.com/teppy_game?ref_src=twsrc%5Etfw">Tweets by teppy_game</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </section>
+    
+    <section id="privacyPolicy">
+        <h2 class="langCng" lang="en">PrivacyPolicy</h2>
+        <h2 class="langCng" lang="ja">プライバシーポリシー</h2>
+        <a href="PrivacyPolicy/index.html" target="_blank">PrivacyPolicy</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 TeppyGameCreator. All rights reserved.</p>
+    </footer>
+
+    <script src="scrolling.js"></script>
+    <script src="ChangeLanguage.js"></script>
 </body>
 </html>
